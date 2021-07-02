@@ -25,6 +25,7 @@ if (homeScroll) {
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
+    navMenu.classList.add("nav-toggle");
   });
 }
 
@@ -39,19 +40,19 @@ function linkAction() {
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 /*===== THEME COLOR =====*/
-const colorList = ["130", "250", "230", "340"];
-let current = parseInt(localStorage.getItem("color-counter"));
-if (!current) {
-  current = 0;
-}
-document.documentElement.style.setProperty("--hue-color", colorList[current]);
-console.log(current);
+// const colorList = ["130", "250", "230", "340"];
+// let current = parseInt(localStorage.getItem("color-counter"));
+// if (!current) {
+//   current = 0;
+// }
+// document.documentElement.style.setProperty("--hue-color", colorList[current]);
+// console.log(current);
 
-nameLogo.addEventListener("click", () => {
-  current = (current + 1) % 4;
-  document.documentElement.style.setProperty("--hue-color", colorList[current]);
-  localStorage.setItem("color-counter", current);
-});
+// nameLogo.addEventListener("click", () => {
+//   current = (current + 1) % 4;
+//   document.documentElement.style.setProperty("--hue-color", colorList[current]);
+//   localStorage.setItem("color-counter", current);
+// });
 
 /*==================== ACCORDION SKILLS ====================*/
 
